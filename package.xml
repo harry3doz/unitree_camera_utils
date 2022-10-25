@@ -46,6 +46,9 @@
   <!-- <exec_depend>camera_info_manager</exec_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
 
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->

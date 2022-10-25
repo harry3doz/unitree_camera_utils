@@ -18,7 +18,8 @@ rm offset
 
 if [ "${patchlines}" == "1" ]; then
     camNum=$(cat patch | head -n 1 | awk '{print $2}')
-    rosrun unitree_camera_utils point_cloud_node _run_config_file:=${SCRIPT_DIR}/config/stereo_camera_config.yaml camera${camNum} ${timeoffset} &
+    #rosrun unitree_camera_utils point_cloud_node _run_config_file:=${SCRIPT_DIR}/config/stereo_camera_config.yaml camera${camNum} ${timeoffset} &
+    rosrun unitree_camera_utils pub_image _run_config_file:=${SCRIPT_DIR}/config/stereo_camera_config.yaml camera${camNum} &
     sleep 5
 elif [ "${patchlines}" == "2" ]; then
     camNum1=$(cat patch | head -n 1 | awk '{print $2}')
